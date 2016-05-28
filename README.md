@@ -13,3 +13,6 @@ Until I've found a proper way for installing this extension, the best way to ins
 #Acknowledgements
 Next to SharpShell, special thanks also go out to [Kiri-rin (author of MarkdownSharp)](https://github.com/Kiri-rin/markdownsharp "Kiri-rin"), who had a lightning response when [I requested a signed version of Markdownsharp](https://github.com/Kiri-rin/markdownsharp/issues/71). 
 
+#Screenshot
+![Sample image](sample.png)
+*Sample preview (taken in the SharpShell Test shell)*
