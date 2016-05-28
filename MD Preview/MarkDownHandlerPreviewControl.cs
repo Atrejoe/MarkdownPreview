@@ -1,14 +1,15 @@
-﻿using System.IO;
+﻿using MarkdownSharp;
 using SharpShell.SharpPreviewHandler;
 using System;
-using MarkdownSharp;
+using System.IO;
+using System.Windows.Forms;
 
 namespace MarkDownPreview
 {
     /// <summary>
     /// Displays content of a file as MarkDown
     /// </summary>
-    /// <seealso cref="SharpShell.SharpPreviewHandler.PreviewHandlerControl" />
+    /// <seealso cref="PreviewHandlerControl" />
     public partial class MarkDownHandlerPreviewControl : PreviewHandlerControl
     {
         /// <summary>
