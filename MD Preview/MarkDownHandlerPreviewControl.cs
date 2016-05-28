@@ -36,14 +36,29 @@ namespace MarkDownPreview
                 string text = mark.Transform(content);
 
                 //Insert the html into the browser
-                webBrowser.DocumentText = $"<html><head></head><body>{text}</body></html>";
+                var html = $@"<!DOCTYPE html>
+<html>
+    <head>
+        <title>Preview pane rendered at {DateTime.Now}</title>
+    </head>
+    <body>
+    {text}
+    </body>
+</html>";
+
+
+                webBrowser.DocumentText = html;
             }
             catch (Exception ex)
             {
                 //  Maybe we could show something to the user in the preview
                 //  window, but for now we'll just ignore any exceptions.
-                webBrowser.DocumentText = ex.ToString();
+
+                MessageBox.Show($"An error occurred while previewing a Markdown file, please report this at https://github.com/Atrejoe/MarkdownPreview/issues.{Environment.NewLine}{ex}");
+
             }
         }
+
+
     }
 }
