@@ -33,11 +33,13 @@
             // 
             // webBrowser
             // 
+            this.webBrowser.AllowNavigation = false;
+            this.webBrowser.AllowWebBrowserDrop = false;
             this.webBrowser.Dock = System.Windows.Forms.DockStyle.Fill;
             this.webBrowser.Location = new System.Drawing.Point(0, 0);
             this.webBrowser.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser.Name = "webBrowser";
-            this.webBrowser.Size = new System.Drawing.Size(150, 150);
+            this.webBrowser.Size = new System.Drawing.Size(969, 561);
             this.webBrowser.TabIndex = 0;
             // 
             // MarkDownHandlerPreviewControl
@@ -46,6 +48,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.webBrowser);
             this.Name = "MarkDownHandlerPreviewControl";
+            this.Size = new System.Drawing.Size(969, 561);
             this.ResumeLayout(false);
 
         }

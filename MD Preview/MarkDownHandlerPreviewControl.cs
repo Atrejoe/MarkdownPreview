@@ -47,6 +47,24 @@ namespace MarkDownPreview
     </body>
 </html>";
 
+                #region Display issues
+                //WebBrowser component does have the proper source (rightclick > view source) but does not display anything
+
+                #region Hack attempt 1
+                //Fix using: http://weblogs.asp.net/gunnarpeipman/displaying-custom-html-in-webbrowser-control
+                //webBrowser.Navigate("about:blank");
+                //if (webBrowser.Document != null)
+                //    webBrowser.Document.Write(html);
+                #endregion
+
+                #region Hack attempt 2
+                //webBrowser.Navigate("about:blank");
+                //while (webBrowser.Document == null || webBrowser.Document.Body == null)
+                //    Application.DoEvents();
+                //webBrowser.Document.OpenNew(true).Write(html);
+                #endregion
+
+                #endregion
 
                 webBrowser.DocumentText = html;
             }
