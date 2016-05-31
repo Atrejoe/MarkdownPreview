@@ -1,18 +1,16 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using MarkDownPreview;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Diagnostics;
 
 namespace MarkdownPreview.Tests
 {
     /// <summary>
-    /// Contains all tests for <see cref="MarkDownHandlerPreviewControl"/>
+    /// Contains all tests for <see cref="MarkdownHandlerPreviewControl"/>
     /// </summary>
     [TestClass]
-    public class MarkDownHandlerPreviewControlTests
+    public class MarkdownHandlerPreviewControlTests
     {
         /// <summary>
-        /// Tests <see cref="MarkDownHandlerPreviewControl.GetCss"/>
+        /// Tests <see cref="MarkdownHandlerPreviewControl.GetCss"/>
         /// </summary>
         [TestMethod]
         public void GetCssTest()
@@ -20,7 +18,7 @@ namespace MarkdownPreview.Tests
             //Arrange
 
             //Act
-            var actual = MarkDownHandlerPreviewControl.GetCss();
+            var actual = MarkdownHandlerPreviewControl.GetCss();
 
             //Assert
             Assert.IsFalse(string.IsNullOrEmpty(actual), "result of getting CSS was null or empty");

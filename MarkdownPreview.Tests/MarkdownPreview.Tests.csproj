@@ -61,17 +61,17 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="MarkDownHandlerPreviewControlTests.cs" />
+    <Compile Include="MarkdownHandlerPreviewControlTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MD Preview\MarkDownPreview.csproj">
-      <Project>{ad9d5aa9-c79a-4818-933c-d583e3b9dae4}</Project>
-      <Name>MarkDownPreview</Name>
-    </ProjectReference>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <ProjectReference Include="..\MarkdownPreview\MarkdownPreview.csproj">
+      <Project>{ad9d5aa9-c79a-4818-933c-d583e3b9dae4}</Project>
+      <Name>MarkdownPreview</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

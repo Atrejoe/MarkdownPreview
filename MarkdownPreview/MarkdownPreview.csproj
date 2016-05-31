@@ -7,8 +7,8 @@
     <ProjectGuid>{AD9D5AA9-C79A-4818-933C-D583E3B9DAE4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MarkDownPreview</RootNamespace>
-    <AssemblyName>MarkDownPreview</AssemblyName>
+    <RootNamespace>MarkdownPreview</RootNamespace>
+    <AssemblyName>MarkdownPreview</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -23,7 +23,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Debug\MarkDownPreview.XML</DocumentationFile>
+    <DocumentationFile>bin\Debug\MarkdownPreview.xml</DocumentationFile>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -33,14 +33,14 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Release\MarkDownPreview.XML</DocumentationFile>
+    <DocumentationFile>bin\Release\MarkdownPreview.xml</DocumentationFile>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup>
     <SignAssembly>true</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>MarkDownPreviewHandler.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>MarkdownPreviewHandler.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="MarkdownSharp, Version=1.14.5.0, Culture=neutral, PublicKeyToken=5344ea585fc05e54, processorArchitecture=MSIL">
@@ -63,22 +63,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MarkDownPreviewHandler.cs" />
-    <Compile Include="MarkDownHandlerPreviewControl.cs">
+    <Compile Include="MarkdownPreviewHandler.cs" />
+    <Compile Include="MarkdownHandlerPreviewControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="MarkDownHandlerPreviewControl.Designer.cs">
-      <DependentUpon>MarkDownHandlerPreviewControl.cs</DependentUpon>
+    <Compile Include="MarkdownHandlerPreviewControl.Designer.cs">
+      <DependentUpon>MarkdownHandlerPreviewControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="MarkDownPreviewHandler.snk" />
+    <None Include="MarkdownPreviewHandler.snk" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="MarkDownHandlerPreviewControl.resx">
-      <DependentUpon>MarkDownHandlerPreviewControl.cs</DependentUpon>
+    <EmbeddedResource Include="MarkdownHandlerPreviewControl.resx">
+      <DependentUpon>MarkdownHandlerPreviewControl.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

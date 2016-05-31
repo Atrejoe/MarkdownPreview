@@ -5,18 +5,18 @@ using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
 
-namespace MarkDownPreview
+namespace MarkdownPreview
 {
     /// <summary>
     /// Displays content of a file as MarkDown
     /// </summary>
     /// <seealso cref="PreviewHandlerControl" />
-    public partial class MarkDownHandlerPreviewControl : PreviewHandlerControl
+    public partial class MarkdownHandlerPreviewControl : PreviewHandlerControl
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="MarkDownHandlerPreviewControl"/> class.
+        /// Initializes a new instance of the <see cref="MarkdownHandlerPreviewControl"/> class.
         /// </summary>
-        public MarkDownHandlerPreviewControl()
+        public MarkdownHandlerPreviewControl()
         {
             InitializeComponent();
         }

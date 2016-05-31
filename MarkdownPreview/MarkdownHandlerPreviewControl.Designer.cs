@@ -1,6 +1,6 @@
-﻿namespace MarkDownPreview
+﻿namespace MarkdownPreview
 {
-    partial class MarkDownHandlerPreviewControl
+    partial class MarkdownHandlerPreviewControl
     {
         /// <summary> 
         /// Required designer variable.

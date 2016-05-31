@@ -3,7 +3,7 @@ using SharpShell.SharpPreviewHandler;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
-namespace MarkDownPreview
+namespace MarkdownPreview
 {
     /// <summary>
     /// Handler that treats text content of a file a MarkDown
@@ -13,12 +13,12 @@ namespace MarkDownPreview
     [COMServerAssociation(AssociationType.ClassOfExtension, ".md")]
     [DisplayName("MarkDown Preview Handler")]
     [PreviewHandler]
-    public class MarkDownPreviewHandler : SharpPreviewHandler
+    public class MarkdownPreviewHandler : SharpPreviewHandler
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="MarkDownPreviewHandler"/> class, enabling visual styles
+        /// Initializes a new instance of the <see cref="MarkdownPreviewHandler"/> class, enabling visual styles
         /// </summary>
-        public MarkDownPreviewHandler() {
+        public MarkdownPreviewHandler() {
             Application.EnableVisualStyles();
         }
 
@@ -32,7 +32,7 @@ namespace MarkDownPreview
         protected override PreviewHandlerControl DoPreview()
         {
             //  Create the handler control.
-            var handler = new MarkDownHandlerPreviewControl();
+            var handler = new MarkdownHandlerPreviewControl();
 
             //  Do we have a file path? If so, we can do a preview.
             if (!string.IsNullOrEmpty(SelectedFilePath))
