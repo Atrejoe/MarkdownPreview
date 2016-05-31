@@ -8,7 +8,9 @@ Inspired by [SharpShell](https://sharpshell.codeplex.com/ "Sharpshell"), a well 
 It displays `.md` files as MarkDown in the Windows Preview pane 
 
 #How to install
-Until I've found a proper way for installing this extension, the best way to install the Markdown Shell Extension is by using Sharpshells' Server Manager Tool, which can be found at:  [SharpShell releases on GitHub](https://github.com/dwmkerr/sharpshell/releases "SharpShell releases").
+Download the latest release from [MarkdownPreview releases on GitHub](https://github.com/Atrejoe/MarkdownPreview/releases "MarkdownPreview on GitHub").
+
+Until I've found a proper way for creating an installer for this extension, the best way to install the Markdown Shell Extension is by using Sharpshells' Server Manager Tool, which can be found at:  [SharpShell releases on GitHub](https://github.com/dwmkerr/sharpshell/releases "SharpShell releases").
 
 #Acknowledgements
 Next to SharpShell, special thanks also go out to [Kiri-rin (author of MarkdownSharp)](https://github.com/Kiri-rin/markdownsharp "Kiri-rin"), who had a lightning response when [I requested a signed version of Markdownsharp](https://github.com/Kiri-rin/markdownsharp/issues/71). 
