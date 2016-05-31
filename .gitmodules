@@ -1,0 +1,3 @@
+[submodule "markdownpad-github"]
+	path = markdownpad-github
+	url = https://github.com/nicolashery/markdownpad-github.git

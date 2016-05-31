@@ -2,6 +2,7 @@
 using SharpShell.SharpPreviewHandler;
 using System;
 using System.IO;
+using System.Reflection;
 using System.Windows.Forms;
 
 namespace MarkDownPreview
@@ -36,17 +37,16 @@ namespace MarkDownPreview
                 // Run parser
                 string text = mark.Transform(content);
 
-                var releaseRemarks = "Original version, with enable visual styles";
+                var releaseRemarks = "Original version, with enable visual styles and stylesheet";
 
                 //Insert the html into the browser
                 var html = $@"<!DOCTYPE html>
 <html>
     <head>
         <title>Preview pane rendered at {DateTime.Now}</title>
-        <style>body {{
-                color:black;
-                background-color:whitesmoke;
-            }}</style>
+        <style>
+{Css}
+        </style>
     </head>
     <body>
     {text}
@@ -107,6 +107,32 @@ namespace MarkDownPreview
 
                 MessageBox.Show($"An error occurred while previewing a Markdown file, please report this at https://github.com/Atrejoe/MarkdownPreview/issues.{Environment.NewLine}{ex}");
 
+            }
+        }
+
+        private static readonly Lazy<string> _Css = new Lazy<string>(GetCss);
+        private static string Css
+        {
+            get
+            {
+                return _Css.Value;
+            }
+        }
+
+        /// <summary>
+        /// Gets the CSS.
+        /// </summary>
+        /// <returns></returns>
+        public static string GetCss()
+        {
+            var assembly = Assembly.GetExecutingAssembly();
+            var resourceName = $"{assembly.GetName().Name}.markdownpad-github.css";
+
+            using (Stream stream = assembly.GetManifestResourceStream(resourceName))
+            using (StreamReader reader = new StreamReader(stream))
+            {
+                string result = reader.ReadToEnd();
+                return result;
             }
         }
     }
