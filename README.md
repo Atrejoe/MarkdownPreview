@@ -17,4 +17,4 @@ Next to SharpShell, special thanks also go out to [Kiri-rin (author of MarkdownS
 
 #Screenshot
 ![Sample image](sample.png)
-*Sample preview (taken in the SharpShell Test shell)*
+*Sample preview (taken in Windows Explorer in Windows 10)*
