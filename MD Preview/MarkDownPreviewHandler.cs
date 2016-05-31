@@ -1,19 +1,27 @@
 ﻿using SharpShell.Attributes;
 using SharpShell.SharpPreviewHandler;
 using System.Runtime.InteropServices;
+using System.Windows.Forms;
 
 namespace MarkDownPreview
 {
     /// <summary>
     /// Handler that treats text content of a file a MarkDown
     /// </summary>
-    /// <seealso cref="SharpShell.SharpPreviewHandler.SharpPreviewHandler" />
+    /// <seealso cref="SharpPreviewHandler" />
     [ComVisible(true)]
     [COMServerAssociation(AssociationType.ClassOfExtension, ".md")]
     [DisplayName("MarkDown Preview Handler")]
     [PreviewHandler]
     public class MarkDownPreviewHandler : SharpPreviewHandler
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="MarkDownPreviewHandler"/> class, enabling visual styles
+        /// </summary>
+        public MarkDownPreviewHandler() {
+            Application.EnableVisualStyles();
+        }
+
         /// <summary>
         /// DoPreview must create the preview handler user interface and initialize it with data
         /// provided by the shell.
