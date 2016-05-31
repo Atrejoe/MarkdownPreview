@@ -36,19 +36,33 @@ namespace MarkDownPreview
                 // Run parser
                 string text = mark.Transform(content);
 
+                var releaseRemarks = "Original version, with enable visual styles";
+
                 //Insert the html into the browser
                 var html = $@"<!DOCTYPE html>
 <html>
     <head>
         <title>Preview pane rendered at {DateTime.Now}</title>
+        <style>body {{
+                color:black;
+                background-color:whitesmoke;
+            }}</style>
     </head>
     <body>
     {text}
     </body>
+    <!-- {releaseRemarks} -->
 </html>";
 
                 #region Display issues
                 //WebBrowser component does have the proper source (rightclick > view source) but does not display anything
+
+                #region Original
+
+                webBrowser.DocumentText = html;
+                webBrowser.Invalidate();
+
+                #endregion
 
                 #region Hack attempt 1
                 //Fix using: http://weblogs.asp.net/gunnarpeipman/displaying-custom-html-in-webbrowser-control
@@ -64,9 +78,27 @@ namespace MarkDownPreview
                 //webBrowser.Document.OpenNew(true).Write(html);
                 #endregion
 
+                #region Hack attampt 3
+                //webBrowser.Navigate("about:blank");
+                //webBrowser.Document.OpenNew(false);
+                //webBrowser.Document.Write(html);
+                //webBrowser.Refresh();
                 #endregion
 
-                webBrowser.DocumentText = html;
+                #region Hack Attempt 4 (various kinds of temp files)
+
+                //var tempFile = new FileInfo(Path.GetTempFileName());
+                //tempFile.Attributes = FileAttributes.Temporary;
+
+                //File.WriteAllText(tempFile.FullName,html);
+
+                //webBrowser.Url = new Uri(tempFile.FullName);
+
+                #endregion
+
+                #endregion
+
+                //MessageBox.Show("Render complete");
             }
             catch (Exception ex)
             {
@@ -77,7 +109,5 @@ namespace MarkDownPreview
 
             }
         }
-
-
     }
 }
