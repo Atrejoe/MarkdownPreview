@@ -1,3 +1,4 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/m8bjcu0iner2ovpo?svg=true)](https://ci.appveyor.com/project/Atrejoe/markdownpreview)
 # MarkdownPreview
 A Windows Preview handler for Markdown files
 
