@@ -52,19 +52,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_442F59178E9A9383A1F04CFB0E4B41AF"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_698A9BC2EE6DD2BD519D41A2AC3EB994"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_D19F56E436D8B9CB35C32B19CA72E235"
+        "OwnerKey" = "8:_B845045F7E1A464C9D45D959FDB8FAE7"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -76,7 +64,19 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_B845045F7E1A464C9D45D959FDB8FAE7"
+        "OwnerKey" = "8:_D19F56E436D8B9CB35C32B19CA72E235"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_698A9BC2EE6DD2BD519D41A2AC3EB994"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_442F59178E9A9383A1F04CFB0E4B41AF"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -136,6 +136,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.5"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.5 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.5"
+                    }
+                }
             }
         }
     }
@@ -201,6 +209,11 @@
             "AssemblyAsmDisplayName" = "8:System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
                 "ScatterAssemblies"
                 {
+                    "_442F59178E9A9383A1F04CFB0E4B41AF"
+                    {
+                    "Name" = "8:System.Net.Http.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:System.Net.Http.dll"
             "TargetName" = "8:"
@@ -227,6 +240,11 @@
             "AssemblyAsmDisplayName" = "8:MarkdownSharp, Version=1.14.5.0, Culture=neutral, PublicKeyToken=5344ea585fc05e54, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
+                    "_698A9BC2EE6DD2BD519D41A2AC3EB994"
+                    {
+                    "Name" = "8:MarkdownSharp.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:MarkdownSharp.dll"
             "TargetName" = "8:"
@@ -284,6 +302,11 @@
             "AssemblyAsmDisplayName" = "8:SharpShell, Version=2.2.0.0, Culture=neutral, PublicKeyToken=f14dc899472fe6fb, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
+                    "_D19F56E436D8B9CB35C32B19CA72E235"
+                    {
+                    "Name" = "8:SharpShell.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:SharpShell.dll"
             "TargetName" = "8:"
@@ -741,8 +764,8 @@
                             "Type" = "3:3"
                             "ContextData" = "8:"
                             "Attributes" = "3:0"
-                            "Setting" = "3:1"
-                            "Value" = "8:#1202"
+                            "Setting" = "3:2"
+                            "Value" = "8:For license see : github.com/Atrejoe/MarkdownPreview"
                             "DefaultValue" = "8:#1202"
                             "UsePlugInResources" = "11:TRUE"
                             }
@@ -881,7 +904,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_C2938D203924448DB9FD7BBB936DFB52"
             {
-            "SourcePath" = "8:..\\MarkdownPreview\\obj\\Debug\\MarkdownPreview.dll"
+            "SourcePath" = "8:..\\MarkdownPreview\\obj\\Release\\MarkdownPreview.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_5CDD34EE88DB44CFAF6ED84F61CDC120"
