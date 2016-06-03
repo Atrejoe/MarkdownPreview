@@ -58,13 +58,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_B845045F7E1A464C9D45D959FDB8FAE7"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_C2938D203924448DB9FD7BBB936DFB52"
+        "OwnerKey" = "8:_698A9BC2EE6DD2BD519D41A2AC3EB994"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -76,7 +70,13 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_698A9BC2EE6DD2BD519D41A2AC3EB994"
+        "OwnerKey" = "8:_C2938D203924448DB9FD7BBB936DFB52"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_B845045F7E1A464C9D45D959FDB8FAE7"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -129,6 +129,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -142,7 +150,7 @@
             "Object" = "8:_B845045F7E1A464C9D45D959FDB8FAE7"
             "FileType" = "3:2"
             "InstallAction" = "3:1"
-            "Arguments" = "8:install \"[TARGETDIR]\\MarkdownPreview.dll\" -codebase"
+            "Arguments" = "8:install \"MarkdownPreview.dll\" -codebase"
             "EntryPoint" = "8:"
             "Sequence" = "3:1"
             "Identifier" = "8:_87227821_C9F3_4EEB_84AC_21B81C8CFAF8"
@@ -156,7 +164,7 @@
             "Object" = "8:_B845045F7E1A464C9D45D959FDB8FAE7"
             "FileType" = "3:2"
             "InstallAction" = "3:4"
-            "Arguments" = "8:uninstall \"[TARGETDIR]\\MarkdownPreview.dll\""
+            "Arguments" = "8:uninstall \"\\MarkdownPreview.dll\""
             "EntryPoint" = "8:"
             "Sequence" = "3:1"
             "Identifier" = "8:_00A8B60C_D3B0_40AD_B944_0EF51DB0E01B"
@@ -193,11 +201,6 @@
             "AssemblyAsmDisplayName" = "8:System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
                 "ScatterAssemblies"
                 {
-                    "_442F59178E9A9383A1F04CFB0E4B41AF"
-                    {
-                    "Name" = "8:System.Net.Http.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:System.Net.Http.dll"
             "TargetName" = "8:"
@@ -224,11 +227,6 @@
             "AssemblyAsmDisplayName" = "8:MarkdownSharp, Version=1.14.5.0, Culture=neutral, PublicKeyToken=5344ea585fc05e54, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_698A9BC2EE6DD2BD519D41A2AC3EB994"
-                    {
-                    "Name" = "8:MarkdownSharp.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:MarkdownSharp.dll"
             "TargetName" = "8:"
@@ -286,11 +284,6 @@
             "AssemblyAsmDisplayName" = "8:SharpShell, Version=2.2.0.0, Culture=neutral, PublicKeyToken=f14dc899472fe6fb, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_D19F56E436D8B9CB35C32B19CA72E235"
-                    {
-                    "Name" = "8:SharpShell.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:SharpShell.dll"
             "TargetName" = "8:"
