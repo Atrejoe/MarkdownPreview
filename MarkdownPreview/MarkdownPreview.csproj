@@ -43,8 +43,8 @@
     <AssemblyOriginatorKeyFile>MarkdownPreviewHandler.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MarkdownSharp, Version=1.14.5.0, Culture=neutral, PublicKeyToken=5344ea585fc05e54, processorArchitecture=MSIL">
-      <HintPath>..\packages\Markdown.1.14.5\lib\net45\MarkdownSharp.dll</HintPath>
+    <Reference Include="Markdown, Version=2.0.0.0, Culture=neutral, PublicKeyToken=1b320cc08ad5aa89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Markdown.2.2.0\lib\net451\Markdown.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="SharpShell, Version=2.2.0.0, Culture=neutral, PublicKeyToken=f14dc899472fe6fb, processorArchitecture=MSIL">

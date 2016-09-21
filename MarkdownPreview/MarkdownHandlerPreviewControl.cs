@@ -1,4 +1,4 @@
-﻿using MarkdownSharp;
+﻿using HeyRed.MarkdownSharp;
 using SharpShell.SharpPreviewHandler;
 using System;
 using System.IO;
