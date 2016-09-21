@@ -78,7 +78,7 @@ namespace MarkdownPreview
                 //webBrowser.Document.OpenNew(true).Write(html);
                 #endregion
 
-                #region Hack attampt 3
+                #region Hack attempt 3
                 //webBrowser.Navigate("about:blank");
                 //webBrowser.Document.OpenNew(false);
                 //webBrowser.Document.Write(html);
