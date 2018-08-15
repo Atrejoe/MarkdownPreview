@@ -1,4 +1,4 @@
-﻿using HeyRed.MarkdownSharp;
+﻿using Markdig;
 using SharpShell.SharpPreviewHandler;
 using System;
 using System.IO;
@@ -31,28 +31,7 @@ namespace MarkdownPreview
             {
                 var content = File.ReadAllText(selectedFilePath);
 
-                // Create new markdown instance
-                var mark = new Markdown();
-
-                // Run parser
-                string text = mark.Transform(content);
-
-                var releaseRemarks = "Original version, with enable visual styles and stylesheet";
-
-                //Insert the html into the browser
-                var html = $@"<!DOCTYPE html>
-<html>
-    <head>
-        <title>Preview pane rendered at {DateTime.Now}</title>
-        <style>
-{Css}
-        </style>
-    </head>
-    <body>
-    {text}
-    </body>
-    <!-- {releaseRemarks} -->
-</html>";
+				string html = MarkDownToHtml(content);
 
                 #region Display issues
                 //WebBrowser component does have the proper source (rightclick > view source) but does not display anything
@@ -109,6 +88,35 @@ namespace MarkdownPreview
 
             }
         }
+
+		/// <summary>
+		/// Converts MarkDown into Html
+		/// </summary>
+		/// <param name="markdown">MarkDown content</param>
+		/// <returns>Html</returns>
+		public static string MarkDownToHtml(string markdown)
+		{
+			// Run parser
+			string text = Markdown.ToHtml(markdown);
+
+			var releaseRemarks = "Original version, with enable visual styles and stylesheet";
+
+			//Insert the html into the browser
+			var html = $@"<!DOCTYPE html>
+<html>
+    <head>
+        <title>Preview pane rendered at {DateTime.Now}</title>
+        <style>
+{Css}
+        </style>
+    </head>
+    <body>
+    {text}
+    </body>
+    <!-- {releaseRemarks} -->
+</html>";
+			return html;
+		}
 
         private static readonly Lazy<string> _Css = new Lazy<string>(GetCss);
         private static string Css
