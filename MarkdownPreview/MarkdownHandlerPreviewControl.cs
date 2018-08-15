@@ -1,22 +1,17 @@
 ﻿using Markdig;
-using SharpShell.Attributes;
 using SharpShell.SharpPreviewHandler;
 using System;
 using System.IO;
 using System.Reflection;
-using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace MarkdownPreview
 {
-	/// <summary>
-	/// Displays content of a file as MarkDown
-	/// </summary>
-	/// <seealso cref="PreviewHandlerControl" />
-	[ComVisible(true)]
-	[COMServerAssociation(AssociationType.ClassOfExtension, ".md",".markdown")]
-	[DisplayName("MarkDown Preview Handler")]
-	public partial class MarkdownHandlerPreviewControl : PreviewHandlerControl
+    /// <summary>
+    /// Displays content of a file as MarkDown
+    /// </summary>
+    /// <seealso cref="PreviewHandlerControl" />
+    public partial class MarkdownHandlerPreviewControl : PreviewHandlerControl
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="MarkdownHandlerPreviewControl"/> class.
@@ -33,58 +28,58 @@ namespace MarkdownPreview
         public void DoPreview(string selectedFilePath)
         {
             try
-			{
-				var content = File.ReadAllText(selectedFilePath);
+            {
+                var content = File.ReadAllText(selectedFilePath);
 
 				string html = MarkDownToHtml(content);
 
-				#region Display issues
-				//WebBrowser component does have the proper source (rightclick > view source) but does not display anything
+                #region Display issues
+                //WebBrowser component does have the proper source (rightclick > view source) but does not display anything
 
-				#region Original
+                #region Original
 
-				webBrowser.DocumentText = html;
-				webBrowser.Invalidate();
+                webBrowser.DocumentText = html;
+                webBrowser.Invalidate();
 
-				#endregion
+                #endregion
 
-				#region Hack attempt 1
-				//Fix using: http://weblogs.asp.net/gunnarpeipman/displaying-custom-html-in-webbrowser-control
-				//webBrowser.Navigate("about:blank");
-				//if (webBrowser.Document != null)
-				//    webBrowser.Document.Write(html);
-				#endregion
+                #region Hack attempt 1
+                //Fix using: http://weblogs.asp.net/gunnarpeipman/displaying-custom-html-in-webbrowser-control
+                //webBrowser.Navigate("about:blank");
+                //if (webBrowser.Document != null)
+                //    webBrowser.Document.Write(html);
+                #endregion
 
-				#region Hack attempt 2
-				//webBrowser.Navigate("about:blank");
-				//while (webBrowser.Document == null || webBrowser.Document.Body == null)
-				//    Application.DoEvents();
-				//webBrowser.Document.OpenNew(true).Write(html);
-				#endregion
+                #region Hack attempt 2
+                //webBrowser.Navigate("about:blank");
+                //while (webBrowser.Document == null || webBrowser.Document.Body == null)
+                //    Application.DoEvents();
+                //webBrowser.Document.OpenNew(true).Write(html);
+                #endregion
 
-				#region Hack attempt 3
-				//webBrowser.Navigate("about:blank");
-				//webBrowser.Document.OpenNew(false);
-				//webBrowser.Document.Write(html);
-				//webBrowser.Refresh();
-				#endregion
+                #region Hack attempt 3
+                //webBrowser.Navigate("about:blank");
+                //webBrowser.Document.OpenNew(false);
+                //webBrowser.Document.Write(html);
+                //webBrowser.Refresh();
+                #endregion
 
-				#region Hack Attempt 4 (various kinds of temp files)
+                #region Hack Attempt 4 (various kinds of temp files)
 
-				//var tempFile = new FileInfo(Path.GetTempFileName());
-				//tempFile.Attributes = FileAttributes.Temporary;
+                //var tempFile = new FileInfo(Path.GetTempFileName());
+                //tempFile.Attributes = FileAttributes.Temporary;
 
-				//File.WriteAllText(tempFile.FullName,html);
+                //File.WriteAllText(tempFile.FullName,html);
 
-				//webBrowser.Url = new Uri(tempFile.FullName);
+                //webBrowser.Url = new Uri(tempFile.FullName);
 
-				#endregion
+                #endregion
 
-				#endregion
+                #endregion
 
-				//MessageBox.Show("Render complete");
-			}
-			catch (Exception ex)
+                //MessageBox.Show("Render complete");
+            }
+            catch (Exception ex)
             {
                 //  Maybe we could show something to the user in the preview
                 //  window, but for now we'll just ignore any exceptions.
@@ -123,7 +118,7 @@ namespace MarkdownPreview
 			return html;
 		}
 
-		private static readonly Lazy<string> _Css = new Lazy<string>(GetCss);
+        private static readonly Lazy<string> _Css = new Lazy<string>(GetCss);
         private static string Css
         {
             get
