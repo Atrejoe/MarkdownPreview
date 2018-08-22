@@ -104,7 +104,7 @@ namespace MarkdownPreview.Demo
 				if (files.Any())
 					GetFiles(files, nodeToAddTo);
 			}
-			catch (UnauthorizedAccessException ex)
+			catch (UnauthorizedAccessException)
 			{
 				nodeToAddTo.Nodes.Add(
 					new TreeNode("Access denied", 0, 0)
