@@ -1,24 +1,24 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using MarkdownPreview.Core;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Diagnostics;
 
 namespace MarkdownPreview.Tests
 {
 	/// <summary>
-	/// Contains all tests for <see cref="MarkdownHandlerPreviewControl"/>
+	/// Contains all tests for <see cref="Engine"/>
 	/// </summary>
 	[TestClass]
-	public class MarkdownHandlerPreviewControlTests
+	public class EngineTests
 	{
 		/// <summary>
-		/// Tests <see cref="MarkdownHandlerPreviewControl.GetCss"/>
+		/// Tests <see cref="Engine.GetCss"/>
 		/// </summary>
 		[TestMethod]
 		public void GetCssTest()
 		{
 			//Arrange
-
 			//Act
-			var actual = MarkdownHandlerPreviewControl.GetCss();
+			var actual = Engine.GetCss();
 
 			//Assert
 			Assert.IsFalse(string.IsNullOrEmpty(actual), "result of getting CSS was null or empty");
@@ -27,7 +27,7 @@ namespace MarkdownPreview.Tests
 		}
 
 		/// <summary>
-		/// Tests <see cref="MarkdownHandlerPreviewControl.MarkDownToHtml(string)"/>
+		/// Tests <see cref="Engine.MarkDownToHtml(string)"/>
 		/// </summary>
 		[TestMethod()]
 		public void MarkDownToHtmlTest()
@@ -37,7 +37,7 @@ namespace MarkdownPreview.Tests
 this is a paragraph with a [link](https://github.com/Atrejoe/MarkdownPreview)";
 			//act
 
-			var html = MarkdownHandlerPreviewControl.MarkDownToHtml(markdown);
+			var html = Engine.MarkDownToHtml(markdown);
 
 			//assert
 			Assert.IsFalse(string.IsNullOrWhiteSpace(html));

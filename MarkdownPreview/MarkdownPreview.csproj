@@ -43,9 +43,6 @@
     <AssemblyOriginatorKeyFile>MarkdownPreviewHandler.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Markdig, Version=0.15.1.0, Culture=neutral, PublicKeyToken=870da25a133885f8, processorArchitecture=MSIL">
-      <HintPath>..\packages\Markdig.Signed.0.15.1\lib\net40\Markdig.dll</HintPath>
-    </Reference>
     <Reference Include="SharpShell, Version=2.3.2.0, Culture=neutral, PublicKeyToken=f14dc899472fe6fb, processorArchitecture=MSIL">
       <HintPath>..\packages\SharpShell.2.3.2\lib\net40-client\SharpShell.dll</HintPath>
     </Reference>
@@ -80,9 +77,10 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="..\markdownpad-github\markdownpad-github.css">
-      <Link>markdownpad-github.css</Link>
-    </EmbeddedResource>
+    <ProjectReference Include="..\MarkdownPreview.Core\MarkdownPreview.Core.csproj">
+      <Project>{7a93a8ef-7440-4380-bdbb-bf759d472529}</Project>
+      <Name>MarkdownPreview.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

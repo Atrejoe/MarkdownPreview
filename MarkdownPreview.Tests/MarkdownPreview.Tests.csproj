@@ -64,13 +64,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MarkdownPreview\MarkdownPreview.csproj">
-      <Project>{ad9d5aa9-c79a-4818-933c-d583e3b9dae4}</Project>
-      <Name>MarkdownPreview</Name>
-    </ProjectReference>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <ProjectReference Include="..\MarkdownPreview.Core\MarkdownPreview.Core.csproj">
+      <Project>{7a93a8ef-7440-4380-bdbb-bf759d472529}</Project>
+      <Name>MarkdownPreview.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
