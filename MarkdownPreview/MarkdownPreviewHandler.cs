@@ -1,6 +1,8 @@
 ﻿using SharpShell.Attributes;
 using SharpShell.SharpPreviewHandler;
+using System;
 using System.Runtime.InteropServices;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MarkdownPreview
@@ -34,9 +36,16 @@ namespace MarkdownPreview
             //  Create the handler control.
             var handler = new MarkdownHandlerPreviewControl();
 
-            //  Do we have a file path? If so, we can do a preview.
-            if (!string.IsNullOrEmpty(SelectedFilePath))
-                handler.DoPreview(SelectedFilePath);
+            handler.VerticalScroll.Enabled = true;
+
+            Action DoPreview = () =>
+            {
+                //  Do we have a file path? If so, we can do a preview.
+                if (!string.IsNullOrEmpty(SelectedFilePath))
+                    handler.DoPreview(SelectedFilePath);
+            };
+
+            Task.Delay(100).ContinueWith(t => DoPreview());
 
             //  Return the handler control.
             return handler;
