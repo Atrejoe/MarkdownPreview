@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarkdownPreview.Core", "Mar
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarkdownPreview.Demo", "MarkdownPreview.Demo\MarkdownPreview.Demo.csproj", "{DB0D182E-00CD-4217-AB98-F3D959677B3F}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{A6AB3662-CBEC-47C1-86E6-51304B50301D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,9 @@ Global
 		{DB0D182E-00CD-4217-AB98-F3D959677B3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB0D182E-00CD-4217-AB98-F3D959677B3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB0D182E-00CD-4217-AB98-F3D959677B3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6AB3662-CBEC-47C1-86E6-51304B50301D}.Debug|Any CPU.ActiveCfg = Debug
+		{A6AB3662-CBEC-47C1-86E6-51304B50301D}.Debug|Any CPU.Build.0 = Debug
+		{A6AB3662-CBEC-47C1-86E6-51304B50301D}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
