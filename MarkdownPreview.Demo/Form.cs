@@ -112,7 +112,10 @@ namespace MarkdownPreview.Demo
 						BackColor = Color.Gray
 					});
 			}
+#pragma warning disable CA1031 // Catching all exceptions
 			catch (Exception ex)
+
+#pragma warning restore CA1031 // Do not catch general exception types
 			{
 				nodeToAddTo.Nodes.Add(
 					new TreeNode(ex.Message, 0, 0)
@@ -158,7 +161,9 @@ namespace MarkdownPreview.Demo
 													: $"`{file.Name}` is no MarkDown file"
 												: "No Markdown file selected";
 			}
+#pragma warning disable CA1031 // Meaning to catch all
 			catch (Exception ex)
+#pragma warning restore CA1031 // Do not catch general exception types
 			{
 				content = $@"An error ocurred while reading file:
 ```
@@ -173,7 +178,7 @@ namespace MarkdownPreview.Demo
 
 		private static bool IsMarkDown(FileInfo nodeFileInfo)
 		{
-			return (new[] { ".md", ".markdown" }).Contains(nodeFileInfo.Extension.ToLower());
+			return (new[] { ".md", ".markdown" }).Contains(nodeFileInfo.Extension, StringComparer.InvariantCultureIgnoreCase);
 		}
 	}
 

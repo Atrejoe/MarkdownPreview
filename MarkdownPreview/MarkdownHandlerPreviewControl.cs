@@ -78,7 +78,9 @@ namespace MarkdownPreview
 
 				//MessageBox.Show("Render complete");
 			}
+#pragma warning disable CA1031 // Meaning to catch all
 			catch (Exception ex)
+#pragma warning restore CA1031 // Do not catch general exception types
 			{
 				//  Maybe we could show something to the user in the preview
 				//  window, but for now we'll just ignore any exceptions.

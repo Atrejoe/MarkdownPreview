@@ -45,7 +45,7 @@ namespace MarkdownPreview
                     handler.DoPreview(SelectedFilePath);
             };
 
-            Task.Delay(100).ContinueWith(t => DoPreview());
+            Task.Delay(100).ContinueWith(t => DoPreview(), TaskScheduler.Default);
 
             //  Return the handler control.
             return handler;
