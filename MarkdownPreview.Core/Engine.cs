@@ -15,23 +15,24 @@ namespace MarkdownPreview.Core
 		public static string MarkDownToHtml(string markdown)
 		{
 			// Run parser
-			string text = Markdown.ToHtml(markdown);
+			var pipeline = new MarkdownPipelineBuilder().UseAdvancedExtensions().Build();
+			string text = Markdown.ToHtml(markdown, pipeline);
 
 			var releaseRemarks = "Original version, with enable visual styles and stylesheet";
 
 			//Insert the html into the browser
 			var html = $@"<!DOCTYPE html>
 <html>
-    <head>
-        <title>Preview pane rendered at {DateTime.Now}</title>
-        <style>
+  <head>
+    <title>Preview pane rendered at {DateTime.Now}</title>
+    <style>
 {Css}
-        </style>
-    </head>
-    <body>
+    </style>
+  </head>
+  <body>
     {text}
-    </body>
-    <!-- {releaseRemarks} -->
+  </body>
+  <!-- {releaseRemarks} -->
 </html>";
 			return html;
 		}
