@@ -12,7 +12,7 @@ It displays `.md` files as MarkDown in the Windows Preview pane
 Download and run the latest installer from [MarkdownPreview releases on GitHub](https://github.com/Atrejoe/MarkdownPreview/releases "MarkdownPreview on GitHub").
 
 # Acknowledgements #
-Next to SharpShell, special thanks also go out to [Kiri-rin (author of MarkdownSharp)](https://github.com/Kiri-rin/markdownsharp "Kiri-rin"), who had a lightning response when [I requested a signed version of Markdownsharp](https://github.com/Kiri-rin/markdownsharp/issues/71). 
+Next to [SharpShell](https://github.com/dwmkerr/sharpshell), this project uses [MarkDig](https://github.com/lunet-io/markdig) styled by [MarkdownPad CSS](https://github.com/nicolashery/markdownpad-github).
 
 # Screenshot #
 ![Sample image](sample.png)

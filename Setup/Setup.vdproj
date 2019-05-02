@@ -15,20 +15,32 @@
     {
         "Entry"
         {
+        "MsmKey" = "8:_1381A56BFF26427C934972A19792B5AB"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_17547E7A235FB9161268A192B7A21DF9"
+        "OwnerKey" = "8:_C2938D203924448DB9FD7BBB936DFB52"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_442F59178E9A9383A1F04CFB0E4B41AF"
         "OwnerKey" = "8:_C2938D203924448DB9FD7BBB936DFB52"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_698A9BC2EE6DD2BD519D41A2AC3EB994"
+        "MsmKey" = "8:_A49068BEB946FFD66B843869CB50D337"
         "OwnerKey" = "8:_C2938D203924448DB9FD7BBB936DFB52"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_B845045F7E1A464C9D45D959FDB8FAE7"
-        "OwnerKey" = "8:_UNDEFINED"
+        "MsmKey" = "8:_A49068BEB946FFD66B843869CB50D337"
+        "OwnerKey" = "8:_1381A56BFF26427C934972A19792B5AB"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -39,44 +51,50 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_D19F56E436D8B9CB35C32B19CA72E235"
+        "MsmKey" = "8:_F68F7D1D0E41C129B5B8698A792471EF"
         "OwnerKey" = "8:_C2938D203924448DB9FD7BBB936DFB52"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_D19F56E436D8B9CB35C32B19CA72E235"
-        "OwnerKey" = "8:_B845045F7E1A464C9D45D959FDB8FAE7"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_B845045F7E1A464C9D45D959FDB8FAE7"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_C2938D203924448DB9FD7BBB936DFB52"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_D19F56E436D8B9CB35C32B19CA72E235"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_698A9BC2EE6DD2BD519D41A2AC3EB994"
+        "MsmKey" = "8:_F68F7D1D0E41C129B5B8698A792471EF"
+        "OwnerKey" = "8:_17547E7A235FB9161268A192B7A21DF9"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_442F59178E9A9383A1F04CFB0E4B41AF"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_1381A56BFF26427C934972A19792B5AB"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_17547E7A235FB9161268A192B7A21DF9"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_F68F7D1D0E41C129B5B8698A792471EF"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_C2938D203924448DB9FD7BBB936DFB52"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_A49068BEB946FFD66B843869CB50D337"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -151,32 +169,32 @@
     {
         "CustomAction"
         {
-            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_8F986035A01F454D83145DBBE7B45368"
+            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_DECD878860BF44BF920995BE083B9739"
             {
-            "Name" = "8:srm.exe"
+            "Name" = "8:ServerRegistrationManager.exe"
             "Condition" = "8:"
-            "Object" = "8:_B845045F7E1A464C9D45D959FDB8FAE7"
+            "Object" = "8:_1381A56BFF26427C934972A19792B5AB"
+            "FileType" = "3:2"
+            "InstallAction" = "3:4"
+            "Arguments" = "8:uninstall \"MarkdownPreview.dll\""
+            "EntryPoint" = "8:"
+            "Sequence" = "3:1"
+            "Identifier" = "8:_CA012721_D1F2_4072_8125_C323230B3231"
+            "InstallerClass" = "11:TRUE"
+            "CustomActionData" = "8:"
+            }
+            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_F69B5060DEE54EB0A5B4DD5E82162A5A"
+            {
+            "Name" = "8:ServerRegistrationManager.exe"
+            "Condition" = "8:"
+            "Object" = "8:_1381A56BFF26427C934972A19792B5AB"
             "FileType" = "3:2"
             "InstallAction" = "3:1"
             "Arguments" = "8:install \"MarkdownPreview.dll\" -codebase"
             "EntryPoint" = "8:"
             "Sequence" = "3:1"
-            "Identifier" = "8:_87227821_C9F3_4EEB_84AC_21B81C8CFAF8"
-            "InstallerClass" = "11:FALSE"
-            "CustomActionData" = "8:"
-            }
-            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_D1EE6D7C0E874D7DA2158812B69B56AC"
-            {
-            "Name" = "8:srm.exe"
-            "Condition" = "8:"
-            "Object" = "8:_B845045F7E1A464C9D45D959FDB8FAE7"
-            "FileType" = "3:2"
-            "InstallAction" = "3:4"
-            "Arguments" = "8:uninstall \"\\MarkdownPreview.dll\""
-            "EntryPoint" = "8:"
-            "Sequence" = "3:1"
-            "Identifier" = "8:_00A8B60C_D3B0_40AD_B944_0EF51DB0E01B"
-            "InstallerClass" = "11:FALSE"
+            "Identifier" = "8:_C958D2A2_C854_4E3D_A37C_95EDD8F44B0A"
+            "InstallerClass" = "11:TRUE"
             "CustomActionData" = "8:"
             }
         }
@@ -202,6 +220,68 @@
         }
         "File"
         {
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_1381A56BFF26427C934972A19792B5AB"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:ServerRegistrationManager, Version=2.7.1.0, Culture=neutral, PublicKeyToken=68bd4561cc3495fc, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_1381A56BFF26427C934972A19792B5AB"
+                    {
+                    "Name" = "8:ServerRegistrationManager.exe"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:..\\packages\\ServerRegistrationManager.2.7.1\\lib\\net45\\ServerRegistrationManager.exe"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_5CDD34EE88DB44CFAF6ED84F61CDC120"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_17547E7A235FB9161268A192B7A21DF9"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:MarkdownPreview.Core, Version=0.7.0.0, Culture=neutral, PublicKeyToken=6abbcf097f260495, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_17547E7A235FB9161268A192B7A21DF9"
+                    {
+                    "Name" = "8:MarkdownPreview.Core.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:MarkdownPreview.Core.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_5CDD34EE88DB44CFAF6ED84F61CDC120"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_442F59178E9A9383A1F04CFB0E4B41AF"
             {
             "AssemblyRegister" = "3:1"
@@ -233,20 +313,20 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_698A9BC2EE6DD2BD519D41A2AC3EB994"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_A49068BEB946FFD66B843869CB50D337"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:MarkdownSharp, Version=1.14.5.0, Culture=neutral, PublicKeyToken=5344ea585fc05e54, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:SharpShell, Version=2.7.1.0, Culture=neutral, PublicKeyToken=f14dc899472fe6fb, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_698A9BC2EE6DD2BD519D41A2AC3EB994"
+                    "_A49068BEB946FFD66B843869CB50D337"
                     {
-                    "Name" = "8:MarkdownSharp.dll"
+                    "Name" = "8:SharpShell.dll"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:MarkdownSharp.dll"
+            "SourcePath" = "8:SharpShell.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_5CDD34EE88DB44CFAF6ED84F61CDC120"
@@ -264,51 +344,20 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_B845045F7E1A464C9D45D959FDB8FAE7"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_F68F7D1D0E41C129B5B8698A792471EF"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:ServerRegistrationManager, Version=2.2.0.0, Culture=neutral, PublicKeyToken=68bd4561cc3495fc, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:Markdig, Version=0.16.0.0, Culture=neutral, PublicKeyToken=870da25a133885f8, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_B845045F7E1A464C9D45D959FDB8FAE7"
+                    "_F68F7D1D0E41C129B5B8698A792471EF"
                     {
-                    "Name" = "8:srm.exe"
+                    "Name" = "8:Markdig.dll"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:..\\BuildTools\\srm.exe"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_5CDD34EE88DB44CFAF6ED84F61CDC120"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_D19F56E436D8B9CB35C32B19CA72E235"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:SharpShell, Version=2.2.0.0, Culture=neutral, PublicKeyToken=f14dc899472fe6fb, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_D19F56E436D8B9CB35C32B19CA72E235"
-                    {
-                    "Name" = "8:SharpShell.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:SharpShell.dll"
+            "SourcePath" = "8:Markdig.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_5CDD34EE88DB44CFAF6ED84F61CDC120"
@@ -382,15 +431,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:MarkdownPreview"
-        "ProductCode" = "8:{CC13EC8A-FB48-4AD7-80D9-A2F772BE9ACC}"
-        "PackageCode" = "8:{37CF8A57-2838-4471-9A79-C716FF71F41A}"
+        "ProductCode" = "8:{FF20ED0F-4A3F-433E-B903-CAE69884C89D}"
+        "PackageCode" = "8:{D1AF950D-542C-463A-8577-E3BE01953F66}"
         "UpgradeCode" = "8:{E8633F31-953E-414E-AA4B-A95C4FB7F323}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.0.0"
+        "ProductVersion" = "8:1.0.2"
         "Manufacturer" = "8:MarkdownPreview"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:https://github.com/Atrejoe/MarkdownPreview/issues"
