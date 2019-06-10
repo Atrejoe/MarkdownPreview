@@ -1,19 +1,18 @@
 ﻿using Markdig;
+using Microsoft.Win32;
 using System;
 using System.IO;
 using System.Reflection;
+using System.Security;
 
-namespace MarkdownPreview.Core
-{
-	public static class Engine
-	{
+namespace MarkdownPreview.Core {
+	public static class Engine {
 		/// <summary>
 		/// Converts MarkDown into Html
 		/// </summary>
 		/// <param name="markdown">MarkDown content</param>
 		/// <returns>Html</returns>
-		public static string MarkDownToHtml(string markdown)
-		{
+		public static string MarkDownToHtml(string markdown) {
 			// Run parser
 			var pipeline = new MarkdownPipelineBuilder().UseAdvancedExtensions().Build();
 			string text = Markdown.ToHtml(markdown, pipeline);
@@ -38,10 +37,8 @@ namespace MarkdownPreview.Core
 		}
 
 		private static readonly Lazy<string> _Css = new Lazy<string>(GetCss);
-		private static string Css
-		{
-			get
-			{
+		private static string Css {
+			get {
 				return _Css.Value;
 			}
 		}
@@ -50,18 +47,53 @@ namespace MarkdownPreview.Core
 		/// Gets the CSS.
 		/// </summary>
 		/// <returns></returns>
-		public static string GetCss()
-		{
+		public static string GetCss() {
 			var assembly = Assembly.GetExecutingAssembly();
 			var resourceName = $"{assembly.GetName().Name}.markdownpad-github.css";
 
 			using (Stream stream = assembly.GetManifestResourceStream(resourceName))
-			using (StreamReader reader = new StreamReader(stream))
-			{
+			using (StreamReader reader = new StreamReader(stream)) {
 				string result = reader.ReadToEnd();
 				return result;
 			}
 
+		}
+
+		/// <summary>
+		/// Determines if the Windows 10 OS is currently in dark mode
+		/// </summary>
+		/// <returns></returns>
+		/// <remarks>
+		/// Obtained from <a href="https://stackoverflow.com/a/51336913/201019">Stack Overflow - how-to-detect-windows-10-light-dark-mode-in-win32-application</a>
+		/// <br/>
+		/// Implemented as part of <a href="https://github.com/Atrejoe/MarkdownPreview/issues/8">#8</a></remarks>
+		public static bool IsDarkMode() {
+
+			try {
+
+				var result = Registry.GetValue($@"{Registry.LocalMachine}\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize", "AppsUseLightTheme", null);
+
+				if (!(result is int))
+					result = Registry.GetValue($@"{Registry.CurrentUser}\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize", "AppsUseLightTheme", null);
+
+				if (result is int IsLightMode)
+					return IsLightMode == 0;
+			}
+			catch (IOException) {
+				//todo: log/display, then return default
+				throw;
+			}
+			catch (SecurityException) {
+				//todo: log/display, then return default
+				throw;
+			}
+			catch (ArgumentException) {
+				//todo: log/display, then return default
+				throw;
+			}        
+
+			//Assume false, so light theme
+			return false;
 		}
 	}
 }
