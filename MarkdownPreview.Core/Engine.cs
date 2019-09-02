@@ -4,6 +4,7 @@ using System;
 using System.IO;
 using System.Reflection;
 using System.Security;
+using System.Text;
 
 namespace MarkdownPreview.Core {
 	public static class Engine {
@@ -53,7 +54,24 @@ namespace MarkdownPreview.Core {
 
 			using (Stream stream = assembly.GetManifestResourceStream(resourceName))
 			using (StreamReader reader = new StreamReader(stream)) {
-				string result = reader.ReadToEnd();
+				var sb = new StringBuilder(reader.ReadToEnd());
+
+				if (IsDarkMode()) {
+
+					sb.Append(@"
+/* Dark mode
+=============================================================================*/
+
+body {
+  background-color: #202020
+}
+
+body, h1, h2, h3, h4, h5
+  color: #fff;
+");
+				}
+
+				var result = sb.ToString();
 				return result;
 			}
 
