@@ -87,6 +87,7 @@ namespace MarkdownPreview
 
 				MessageBox.Show($"An error occurred while previewing a Markdown file, please report this at https://github.com/Atrejoe/MarkdownPreview/issues.{Environment.NewLine}{ex}");
 
+				throw;
 			}
 		}
 
