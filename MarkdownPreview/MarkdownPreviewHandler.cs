@@ -35,36 +35,36 @@ namespace MarkdownPreview {
 
 			try {
 				//  Create the handler control.
-			var handler = new MarkdownHandlerPreviewControl();
+				var handler = new MarkdownHandlerPreviewControl();
 
-			handler.VerticalScroll.Enabled = true;
+				handler.VerticalScroll.Enabled = true;
 
-			Action DoPreview = () => {
+				void DoPreview() {
+					Log($"Doing preview");
+
+					//  Do we have a file path? If so, we can do a preview.
+					if (!string.IsNullOrEmpty(SelectedFilePath))
+						try {
+							handler.DoPreview(SelectedFilePath);
+						}
+#pragma warning disable CA1031 // Do not catch general exception types
+						catch (Exception ex) {
+#pragma warning restore CA1031 // Do not catch general exception types
+							LogError($"Preview failure {ex.Message}", ex);
+							throw;
+						}
+				}
+
+				Log($"Running preview with delay");
+				Task.Delay(100).ContinueWith(t => DoPreview(), TaskScheduler.Default);
+				//DoPreview();
+
+				//  Return the handler control.
+
+				Log($"Returning handler");
 				Log($"Doing preview");
 
-				//  Do we have a file path? If so, we can do a preview.
-				if (!string.IsNullOrEmpty(SelectedFilePath))
-					try {
-						handler.DoPreview(SelectedFilePath);
-					}
-#pragma warning disable CA1031 // Do not catch general exception types
-					catch (Exception ex) {
-#pragma warning restore CA1031 // Do not catch general exception types
-						LogError($"Preview failure {ex.Message}", ex);
-						throw;
-					}
-			};
-
-			Log($"Running preview with delay");
-			Task.Delay(100).ContinueWith(t => DoPreview(), TaskScheduler.Default);
-			//DoPreview();
-
-			//  Return the handler control.
-
-			Log($"Returning handler");
-			Log($"Doing preview");
-
-			return handler;
+				return handler;
 			}
 #pragma warning disable CA1031 // Do not catch general exception types
 			catch (Exception ex) {

@@ -17,20 +17,20 @@ namespace MarkdownPreview.Demo
 		{
 			InitializeComponent();
 
-			treeView.NodeMouseClick += treeView_NodeMouseClick;
-			treeView.BeforeExpand += treeView_NodeExpand;
-			treeView.AfterSelect += treeView_NodeSelected;
+			treeView.NodeMouseClick += TreeView_NodeMouseClick;
+			treeView.BeforeExpand += TreeView_NodeExpand;
+			treeView.AfterSelect += TreeView_NodeSelected;
 
 			PopulateTreeView();
 		}
 
-		private void treeView_NodeSelected(object sender, TreeViewEventArgs e)
+		private void TreeView_NodeSelected(object sender, TreeViewEventArgs e)
 		{
 			TreeNode newSelected = e.Node;
 			ShowContent(newSelected);
 		}
 
-		private void treeView_NodeExpand(object sender, TreeViewCancelEventArgs e)
+		private void TreeView_NodeExpand(object sender, TreeViewCancelEventArgs e)
 		{
 			foreach (TreeNode node in e.Node.Nodes)
 				if ((node.Tag is DirectoryInfo dir))
@@ -141,7 +141,7 @@ namespace MarkdownPreview.Demo
 
 		}
 
-		void treeView_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
+		void TreeView_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
 		{
 			TreeNode newSelected = e.Node;
 			ShowContent(newSelected);
