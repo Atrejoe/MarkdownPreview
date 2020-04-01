@@ -1,3 +1,11 @@
+> # Maintenance warning, alternative suggestion	
+> Since [v.0.16.0](https://github.com/microsoft/PowerToys/releases/tag/v0.16.0) MS Powertoys can perform the same task.
+> Given that my setup is buggy and poorly supported, I recommend using MS Powertoys.
+>
+> It was fun to develop this tool, less fun debugging it.
+>
+> Thanks [@Aaltuj](https://github.com/Aaltuj) for the heads up
+
 [![Build status](https://ci.appveyor.com/api/projects/status/m8bjcu0iner2ovpo?svg=true)](https://ci.appveyor.com/project/Atrejoe/markdownpreview)
 # MarkdownPreview #
 A Windows Explorer preview pane handler for Markdown files
