@@ -12,6 +12,8 @@ namespace MarkdownPreview.Demo
 {
 	public partial class Form : System.Windows.Forms.Form
 	{
+		private const string imageKey_File = @"file";
+		private const string imageKey_Folder = @"folder";
 
 		public Form()
 		{
@@ -79,7 +81,7 @@ namespace MarkdownPreview.Demo
 			if (!HasReadAccess(dir.FullName))
 			{
 				nodeToAddTo.Nodes.Add(
-					new TreeNode("No access", 0, 0)
+					new TreeNode(Properties.Resources.Dir_No_Access, 0, 0)
 					{
 						BackColor = Color.Gray
 					});
@@ -90,10 +92,11 @@ namespace MarkdownPreview.Demo
 			{
 				foreach (DirectoryInfo subDir in dir.GetDirectories())
 				{
+					
 					var aNode = new TreeNode(subDir.Name, 0, 0)
 					{
 						Tag = subDir,
-						ImageKey = "folder"
+						ImageKey = imageKey_Folder
 					};
 
 					nodeToAddTo.Nodes.Add(aNode);
@@ -107,7 +110,7 @@ namespace MarkdownPreview.Demo
 			catch (UnauthorizedAccessException)
 			{
 				nodeToAddTo.Nodes.Add(
-					new TreeNode("Access denied", 0, 0)
+					new TreeNode(Properties.Resources.Dir_Access_Denied, 0, 0)
 					{
 						BackColor = Color.Gray
 					});
@@ -133,7 +136,7 @@ namespace MarkdownPreview.Demo
 					new TreeNode(file.Name, 0, 0)
 					{
 						Tag = file,
-						ImageKey = "file",
+						ImageKey = $@"{imageKey_File}",
 						ForeColor = IsMarkDown(file)
 							? Color.Blue
 							: Color.Black
